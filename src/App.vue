@@ -6,6 +6,7 @@
         <div class="col">
           <div class="d-flex">
             <p class="fs-4 me-2">Футы:</p>
+            <!--Поле для ввода и вывода ед. Футов -->
             <input v-model="feet" @input="convertToMeter" class="input-site border fs-4 p-2 w-100" type="text">
           </div>
 
@@ -13,6 +14,7 @@
         <div class="col">
           <div class="d-flex">
             <p class="fs-4 me-2">Метр:</p>
+            <!--Поле для ввода и вывода ед. Метров -->
             <input v-model="meter" @input="convertToFeet" class="input-site border fs-4 p-2 w-100" type="text">
           </div>
 
@@ -28,6 +30,7 @@
         <div class="col">
           <div class="d-flex">
             <p class="fs-4 me-2">Мили:</p>
+            <!--Поле для ввода и вывода ед. Миль -->
             <input v-model="mile" @input="convertToKilometer" class="input-site border fs-4 p-2 w-100" type="text">
           </div>
 
@@ -35,6 +38,7 @@
         <div class="col">
           <div class="d-flex">
             <p class="fs-4 me-2">Километр:</p>
+            <!--Поле для ввода и вывода ед. Километров -->
             <input v-model="kilometer" @input="convertToMile" class="input-site border fs-4 p-2 w-100" type="text">
           </div>
 
@@ -49,6 +53,7 @@
         <div class="col">
           <div class="d-flex">
             <p class="fs-4 me-2">Градусы:</p>
+            <!--Поле для ввода и вывода ед. Градусов -->
             <input v-model="degree" @input="convertToRadian" class="input-site border fs-4 p-2 w-100" type="text">
           </div>
 
@@ -56,6 +61,7 @@
         <div class="col">
           <div class="d-flex">
             <p class="fs-4 me-2">Радианы:</p>
+            <!--Поле для ввода и вывода ед. Радиан -->
             <input v-model="radian" @input="convertToDegree" class="input-site border fs-4 p-2 w-100" type="text">
           </div>
 
@@ -69,6 +75,7 @@
         <div class="col">
           <div class="d-flex">
             <p class="fs-4 me-2">C:</p>
+            <!--Поле для ввода и вывода ед. Цельсий -->
             <input v-model="celsius" @input="convertToFahrenheit" class="input-site border fs-4 p-2 w-100" type="text">
           </div>
 
@@ -76,6 +83,7 @@
         <div class="col">
           <div class="d-flex">
             <p class="fs-4 me-2">F:</p>
+            <!--Поле для ввода и вывода ед. Фаренгейта -->
             <input v-model="fahrenheit" @input="convertToCelsius" class="input-site border fs-4 p-2 w-100" type="text">
           </div>
 
@@ -88,6 +96,7 @@
 
 <script>
 export default {
+  // Исходные данные + константы для перевода единиц
   data() {
     return {
       feet: 0,
@@ -104,6 +113,7 @@ export default {
       fToC: 33.8,
     }
   },
+  // Методы перевода из одних ед. в другие
   methods: {
     convertToMeter() {
       this.meter = this.feet / this.fToM;
